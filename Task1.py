@@ -1,7 +1,11 @@
+from datetime import datetime
 
-for i in range(0, 10):
-    print(f"{i} - line")
 
-from math import factorial as fact
+def days_until_new_year():
+    today = datetime.now()
+    new_year = datetime(today.year + 1, 1, 1)
+    delta = new_year - today
+    return delta
 
-print(fact(3))
+if __name__ == '__main__':
+    print(days_until_new_year())
